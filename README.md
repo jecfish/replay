@@ -77,7 +77,7 @@ the `PuppeteerRunnerExtension` class as shown in the example below or you
 can extend the `RunnerExtension` class and define a completely new behaviour.
 
 ```js
-import { createRunner, PuppeteerRunnerExtension } from '../../lib/main.js';
+import { createRunner, PuppeteerRunnerExtension } from '@puppeteer/replay';
 import puppeteer from 'puppeteer';
 
 const browser = await puppeteer.launch({
@@ -129,7 +129,7 @@ await browser.close();
 ## [Customize how a recording is stringified](/examples/extend-stringify/main.js)
 
 ```js
-import { stringify, PuppeteerStringifyExtension } from '../../lib/main.js';
+import { stringify, PuppeteerStringifyExtension } from '@puppeteer/replay';
 
 class Extension extends PuppeteerStringifyExtension {
   // beforeAllSteps?(out: LineWriter, flow: UserFlow): Promise<void>;
